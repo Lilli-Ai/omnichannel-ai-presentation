@@ -17,7 +17,7 @@ html,body{height:100%;margin:0}
 body{background:var(--ink);color:var(--sand);font-family:var(--body);overflow:hidden}
 .viewport{position:fixed;inset:0;overflow:hidden;overflow:clip}
 .stage{width:1280px;height:720px;position:absolute;left:50%;top:50%;overflow:hidden;overflow:clip;transform-origin:center center}
-.slide{position:absolute;inset:0;padding:52px 64px 40px;display:flex;flex-direction:column;background:var(--ink);
+.slide{position:absolute;inset:0;padding:40px 56px 56px;display:flex;flex-direction:column;justify-content:center;background:var(--ink);
   opacity:0;transform:translateX(60px);pointer-events:none;transition:opacity .5s ease,transform .5s ease}
 .slide.active{opacity:1;transform:none;pointer-events:auto}
 .slide.past{transform:translateX(-60px)}
@@ -25,8 +25,8 @@ body{background:var(--ink);color:var(--sand);font-family:var(--body);overflow:hi
 .kicker{font-family:var(--mono);font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
 h1,h2{font-family:var(--display);font-weight:800;letter-spacing:-.02em;text-wrap:balance;margin:0}
 h1{font-size:76px;line-height:1}
-h2{font-size:44px;line-height:1.08;margin-top:10px}
-.lead{font-size:20px;color:var(--muted);line-height:1.5;margin:14px 0 0}
+h2{font-size:50px;line-height:1.08;margin-top:10px}
+.lead{font-size:23px;color:var(--muted);line-height:1.5;margin:14px 0 0}
 .num{display:none;font-family:var(--mono);font-size:13px;color:var(--muted);position:absolute;right:64px;bottom:22px;letter-spacing:.1em}
 /* app-window frame for screenshots */
 .win{background:#0a121c;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);display:flex;flex-direction:column;min-height:0}
@@ -36,13 +36,13 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 .win img{display:block;width:100%;height:auto}
 .win.fit img{height:100%;width:100%;object-fit:cover;object-position:top left}
 /* layouts */
-.split{display:grid;grid-template-columns:1fr auto;gap:44px;flex:1;min-height:0;margin-top:22px}
+.split{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;margin-top:10px}
 .split .txt{min-width:0;display:flex;flex-direction:column;gap:14px;padding-top:6px}
-.phone{height:560px;width:auto}
-.phone img{height:530px;width:auto}
+.phone{width:auto}
+.phone img{height:590px;width:auto}
 .wide{margin-top:20px;flex:1;min-height:0}
 .points{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.points li{font-size:20px;line-height:1.45;padding-left:22px;position:relative}
+.points li{font-size:23px;line-height:1.45;padding-left:22px;position:relative}
 .points li:before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;background:var(--amber);border-radius:2px}
 .points b{color:var(--sand)}
 .points span{color:var(--muted)}
@@ -59,29 +59,29 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 /* problem */
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px 26px}
-.card h3{font-family:var(--display);font-size:26px;margin:0 0 6px}
-.card p{margin:0;font-size:18px;color:var(--muted);line-height:1.45}
+.card h3{font-family:var(--display);font-size:30px;margin:0 0 6px}
+.card p{margin:0;font-size:21px;color:var(--muted);line-height:1.45}
 /* flow */
 .flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:40px}
 .flow div{border-top:3px solid var(--amber);padding:16px 18px 0 0}
 .flow b{font-family:var(--mono);font-size:13px;color:var(--amber);letter-spacing:.1em;display:block}
-.flow strong{font-family:var(--display);font-size:26px;display:block;margin-top:8px}
-.flow p{margin:6px 0 0;font-size:16px;color:var(--muted);line-height:1.4}
-.quote{font-family:var(--display);font-size:36px;font-weight:600;margin-top:auto;margin-bottom:30px;max-width:980px;line-height:1.2}
+.flow strong{font-family:var(--display);font-size:30px;display:block;margin-top:8px}
+.flow p{margin:6px 0 0;font-size:19px;color:var(--muted);line-height:1.4}
+.quote{font-family:var(--display);font-size:38px;font-weight:600;margin-top:48px;margin-bottom:0;max-width:980px;line-height:1.2}
 .quote em{font-style:normal;color:var(--amber)}
 /* numbers */
 .nums{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:60px}
 .nums div{border-top:3px solid var(--amber);padding-top:16px}
-.nums strong{font-family:var(--display);font-size:64px;font-weight:800;letter-spacing:-.03em;display:block;font-variant-numeric:tabular-nums}
+.nums strong{font-family:var(--display);font-size:58px;font-weight:600;letter-spacing:-.03em;display:block;font-variant-numeric:tabular-nums}
 .nums strong small{font-size:28px}
-.nums span{font-size:17px;color:var(--muted)}
-.foot-note{margin-top:auto;margin-bottom:24px;font-family:var(--mono);font-size:14px;color:var(--muted)}
+.nums span{font-size:23px;color:var(--muted);display:block;margin-top:6px;line-height:1.3}
+.foot-note{margin-top:56px;margin-bottom:0;font-family:var(--mono);font-size:17px;color:var(--muted)}
 .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.tags span{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:19px}
-.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:auto;margin-bottom:26px}
+.tags span{border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-size:21px}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
 .contacts div{border-top:1px solid var(--line);padding-top:12px}
 .contacts small{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted);display:block}
-.contacts b{font-size:21px;font-weight:600}
+.contacts b{font-size:24px;font-weight:600}
 /* controls */
 .ctrl{position:fixed;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;z-index:5}
 .ctrl button{background:var(--panel);color:var(--sand);border:1px solid var(--line);border-radius:6px;width:38px;height:34px;font-size:16px;cursor:pointer}
@@ -91,9 +91,9 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 .count{font-family:var(--mono);font-size:13px;color:var(--muted);min-width:56px;text-align:center}
 .stack{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 18px;margin-top:26px}
 .st{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 18px;display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center}
-.st small{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
-.st b{font-size:17px;font-weight:500;line-height:1.35}
-.built{margin-top:auto;margin-bottom:22px;font-size:15px;color:var(--muted)}
+.st small{font-family:var(--mono);font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.st b{font-size:20px;font-weight:500;line-height:1.35}
+.built{margin-top:28px;margin-bottom:0;font-size:17px;color:var(--muted)}
 .built span{font-family:var(--mono);color:var(--sand)}
 .progress{position:fixed;left:0;top:0;height:3px;background:var(--amber);transition:width .3s;z-index:5}
 </style>
@@ -142,15 +142,15 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 </section>
 
 <section class="slide" id="channels">
-  <div class="kicker">Channels</div>
   <div class="split">
     <div class="txt">
+      <div class="kicker">Channels</div>
       <h2>Every channel, every language</h2>
       <p class="lead">One assistant behind the website chat, Telegram and email. It answers in the language the client writes in.</p>
       <ul class="points" style="margin-top:12px">
         <li><b>Website, Telegram, Email</b> <span>live, one shared inbox</span></li>
         <li><b>Armenian, Russian, English</b> <span>also typed in Latin letters</span></li>
-        <li><b>WhatsApp and Instagram</b> <span>prepared, switch on after business verification</span></li>
+        <li><b>WhatsApp, Facebook, Instagram</b> <span>prepared, switch on after business verification</span></li>
       </ul>
       <div style="display:flex;gap:8px;margin-top:8px"><span class="chip on">WEBSITE · LIVE</span><span class="chip on">TELEGRAM · LIVE</span><span class="chip on">EMAIL · LIVE</span></div>
     </div>
@@ -160,9 +160,9 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 </section>
 
 <section class="slide" id="voice">
-  <div class="kicker">Voice to lead</div>
   <div class="split">
     <div class="txt">
+      <div class="kicker">Voice to lead</div>
       <h2>Clients just talk</h2>
       <p class="lead">A voice note is transcribed and handled like text. The assistant asks the next question in the client's language and collects the lead step by step.</p>
       <ul class="points" style="margin-top:12px">
@@ -192,9 +192,9 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 </section>
 
 <section class="slide" id="lead">
-  <div class="kicker">Handoff</div>
   <div class="split">
     <div class="txt">
+      <div class="kicker">Handoff</div>
       <h2>The manager gets a ready lead</h2>
       <p class="lead">Destination, dates, travelers, language and score arrive in Telegram the moment the lead is complete, from any channel.</p>
       <ul class="points" style="margin-top:12px">
@@ -225,9 +225,9 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 </section>
 
 <section class="slide" id="reliability">
-  <div class="kicker">Reliability</div>
-  <div class="split" style="grid-template-columns:1fr 560px">
+  <div class="split" style="grid-template-columns:1fr 1.25fr">
     <div class="txt">
+      <div class="kicker">Reliability</div>
       <h2>No single point of failure</h2>
       <ul class="points" style="margin-top:12px">
         <li><b>Voice</b> <span>main and backup speech recognition</span></li>
@@ -237,7 +237,7 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
         <li><b>Watched 24/7</b> <span>external monitoring of every service</span></li>
       </ul>
     </div>
-    <div class="win" style="align-self:center"><div class="bar"><i></i><i></i><i></i><span>UptimeRobot · monitors</span></div><img src="img/uptime-monitors.png" alt="UptimeRobot monitors for the site, Chatwoot, n8n and NocoDB, all at 100 percent"></div>
+    <div class="win"><div class="bar"><i></i><i></i><i></i><span>UptimeRobot · monitors</span></div><img src="img/uptime-monitors.png" alt="UptimeRobot monitors for the site, Chatwoot, n8n and NocoDB, all at 100 percent"></div>
   </div>
   <div class="num">11</div>
 </section>
@@ -261,6 +261,11 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
   <h2>The core fits any business that lives on inbound requests</h2>
   <p class="lead">Channels, AI logic, validator and scoring stay the same. Only the qualifying questions and business rules change.</p>
   <div class="tags"><span>Travel</span><span>Real estate</span><span>Clinics</span><span>Education</span><span>Car dealers</span><span>Service companies</span></div>
+  <div class="cards" style="grid-template-columns:repeat(3,1fr);margin-top:36px">
+    <div class="card"><h3>New channel</h3><p>One more inbox. The AI logic does not change.</p></div>
+    <div class="card"><h3>WhatsApp, Facebook, Instagram, Viber</h3><p>Researched and prepared, ready once the business is verified.</p></div>
+    <div class="card"><h3>Production AI</h3><p>Switch to a paid tier without touching the workflow.</p></div>
+  </div>
   <div class="contacts">
     <div><small>WEBSITE</small><b>travel.lilia.am</b></div>
     <div><small>TELEGRAM</small><b>@travel_assistant_am_bot</b></div>
@@ -276,7 +281,7 @@ h2{font-size:44px;line-height:1.08;margin-top:10px}
 <script>
 (function(){
   var slides=[].slice.call(document.querySelectorAll('.slide')),stage=document.getElementById('stage'),prog=document.getElementById('progress'),i=0;
-  function fit(){var s=Math.min(innerWidth/1280,(innerHeight-50)/720);stage.style.transform='translate(-50%,-50%) scale('+s+')'}
+  function fit(){var W=innerWidth,H=innerHeight,w=1280,s;if(W/H>=16/9){s=H/720;w=Math.min(Math.round(W/s),1760)}else{s=W/1280}stage.style.width=w+'px';stage.style.transform='translate(-50%,-50%) scale('+s+')'}
   function show(n,push){i=Math.max(0,Math.min(slides.length-1,n));stage.scrollLeft=0;stage.scrollTop=0;stage.parentNode.scrollLeft=0;
     slides.forEach(function(s,k){s.classList.toggle('active',k===i);s.classList.toggle('past',k<i)});
     prog.style.width=((i+1)/slides.length*100)+'%';document.getElementById('count').textContent=(i+1)+' / '+slides.length;
